@@ -1,0 +1,125 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    ;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(13, 203, 48, 0.25), rgba(30, 199, 15, 0.1)), url(imagenes/61312a_93c9ba76b116438383d188cd2db0e90c~mv2.jpg) no-repeat center fixed;
+    background-size: cover;
+    height: 100vh;
+
+
+}
+
+.login-box {
+    width: 320px;
+    height: 420px;
+    background: linear-gradient(rgba(0, 217, 11, 0.4), rgba(17, 205, 14, 0.4));
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.login-box .avatar {
+
+    width: 150px;
+    position: absolute;
+    top: -80px;
+    left: calc(65% - 120px);
+}
+
+.login-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    text-shadow: 0 0 10px black;
+}
+
+.login-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    text-shadow: 0 0 10px black;
+}
+
+.login-box input {
+    width: 100%;
+    margin-bottom: 20px;
+    ;
+}
+
+.login-box input[type="Email"],
+.login-box input[type="password"] {
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-shadow: 0 0 10px black;
+}
+
+.login-box input[type="Email"]::placeholder,
+.login-box input[type="password"]::placeholder {
+    color: #c4c4c4;
+
+}
+
+.login-box .btn {
+    text-align: center;
+    font-size: medium;
+    display: block;
+    margin: 15px auto;
+    padding: 10px 40px;
+    border: 2px solid rgb(27, 255, 145);
+    background-color: rgb(17, 221, 51);
+    color: #fff;
+    box-shadow: 0 0 10px black;
+    border-radius: 25px;
+    cursor: pointer;
+
+}
+
+.login-box .btn:hover {
+    background: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 10px black;
+}
+
+.login-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px black;
+}
+
+.login-box a:hover {
+    color: rgb(47, 255, 0);
+
+}
+
+.error {
+    
+    color: red;
+}
+.login{
+   width: 30px;
+
+}

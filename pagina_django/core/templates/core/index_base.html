@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'estilo_index.css' %}">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <title>Pagina_wed</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+
+    
+
+</head>
+
+<body>
+    <header>
+        <!--LOGO -->
+        <div class="arriba">
+            <div class="logo">
+                <img class="log" src="{% static 'productos/zarla-nanny-can-1x1-2400x2400-20211020-9bbg4gtrmgfrd7p3wxph.png' %}" alt="">
+
+            </div>
+        </div>
+        <!-- PRINCIPAL -->
+        <div class="principal">
+            <div class="narvar">
+                <a href="{% url 'home' %}">INICIO</a>
+                <a href="#">PRODUCTOS</a>
+                <a href="seguimiento.html">SEGUIMIENTO</a>
+                <a href="{% url 'suscripcion' %}">SUSCRIBIRSE</a>
+                <a href="{% url 'carro' %}">CARRITO</a>
+            </div>
+            <!-- BUSQUEDA-->
+            <div class="buscador">
+                <form class="BS" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+                    <!-- BOTON DE BUSQUEDA -->
+                    &nbsp;<div class="boton">
+                        <img src="{% static 'imagenes/icons8_search_60px_1.png' %}" alt="buscar">
+                    </div>
+                </form>
+            </div>
+            <!--LOGIN-->
+            <div class="login">
+                {% if user.is_authenticated %}
+                  {% if suscrito %}
+                        ⭐
+                  {% else %}
+                        💔
+
+                  {% endif %}
+                  <a href="">{{user.username}}</a> 
+                  <a href="{% url 'logout' %}">SALIR</a>
+                {% else %}
+                  <a href="{% url 'login' %}">INGRESAR </a>
+                  <a href="{% url 'registro' %}">REGISTRAR</a> 
+        
+                {% endif %}
+             
+            </div>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+        <footer>
+            <div class="informacion">
+                <div class="box">
+                    <figure>
+                        <a href="#">
+                            <img src="{% static 'productos/zarla-nanny-can-1x1-2400x2400-20211020-9bbg4gtrmgfrd7p3wxph.png' %}"
+                                alt="logo" />
+                        </a>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>Sobre Nosotros</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+                        voluptates, consectetur neque ipsam iusto voluptatem repellendus ea
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                        nobis, iure esse omnis quae amet sed doloribus dolores cupiditate,
+                    </p>
+                    <div class="btn-container">
+                        <a class="btn" href="#" class="btn">VER MÁS</a>
+                        <a class="btn" href="{% url 'suscripcion' %}" class="btn">SUCRIBIRSE</a>
+                    </div>
+                </div>
+                <!--<div class="box">
+                <h2>Siguenos</h2>
+                <div class="rrss">
+                  <a href="https://es-la.facebook.com/" class="fa fa-facebook"></a>
+                  <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                  <a href="https://twitter.com/?lang=es" class="fa fa-twitter"></a>
+      
+                </div>
+              </div>-->
+
+            </div>
+            <div class="grupo-2">
+                <small>&copy;2023 <b>claudio hace todo</b> - Todos los Derechos
+                    Reservados.</small>
+            </div>
+
+
+        </footer>
+
+    </header>
+
+{% block head %}
+
+{% endblock %}
+    
+
+</body>
+
+</html>

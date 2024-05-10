@@ -1,0 +1,76 @@
+{% extends 'core/historial_base.html' %}
+{% load static %}
+
+
+{% block content %}
+<body>
+    <header>
+        <!--LOGO -->
+        <div class="arriba">
+            <div class="logo">
+                <img class="log" src="{% static 'productos/zarla-nanny-can-1x1-2400x2400-20211020-9bbg4gtrmgfrd7p3wxph.png' %}" alt="">
+
+            </div>
+        </div>
+        <!-- PRINCIPAL -->
+        <div class="principal">
+            <div class="narvar">
+                <a href="{% url 'home' %}">ATRAS</a>
+
+
+            </div>
+            <!-- BUSQUEDA
+            <div class="buscador">
+                <form class="BS" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+                    BOTON DE BUSQUEDA
+                    &nbsp;<div class="boton">
+                        <img src="{% static 'imagenes/icons8_search_60px_1.png' %}" alt="buscar">
+                    </div>
+                </form>
+            </div> -->
+            <!--LOGIN-->
+
+        </div>
+        <!--carrusel-->
+
+
+
+
+
+        <!--productos-->
+        <section class="productos " id="cart-container">
+            <h2 class="titulo">Tus productos seleccionados</h2>
+
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>fecha</td>
+                        <td>Cliente</td>
+                        <td>Total</td>
+                        <td></td>
+                        
+                </thead>
+
+                <tbody>
+                    {% for item in compras%}
+                    <tr>
+                        <td>{{item.fecha}}</td>
+                        <td>{{item.cliente}}</td>
+                        <td>${{item.total}}</td>
+                    </tr>
+
+                    {% endfor %}
+
+                  
+                </tbody>
+            </table>
+        </section>
+
+      
+       {% endblock %} 
+
+
+        <!--fin de principal-->
+
+       

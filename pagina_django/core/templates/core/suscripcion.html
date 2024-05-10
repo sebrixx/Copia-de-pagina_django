@@ -1,0 +1,77 @@
+{% extends 'core/suscripcion_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<body>
+    
+    <section>
+        <div class="container-sub">
+            <div class="conten-sub">
+                {% if suscrito %}
+                <h2>
+                    Felicidades, estas suscrito.
+                </h2>
+                <p>Estaras recibiendo un 5% de descuentos en tus primeras compras</p>
+                <form action="{% url 'home' %}" >
+                   
+                    <button type="submit" style="
+                        width: 150px;
+                        height: 60px;
+                        border: 3px solid #08cc7e;
+                        border-radius: 45px;
+                        transition: all 0.3s;
+                        cursor: pointer;
+                        background: white;
+                        font-size: 1.2em;
+                        font-weight: 550;
+                        font-family: 'Montserrat', sans-serif;
+                      
+                      
+                      .button:hover {
+                        background: #315cfd;
+                        color: white;
+                        font-size: 1.5em;
+                      }">ok
+                    </button>
+
+                {% else %}
+
+                <h2> Suscribete </h2>
+                <p>recibiras un 5% de descuentos en tus primeras compras</p>
+                <form action="{% url 'suscribir' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" style="
+                        width: 150px;
+                        height: 60px;
+                        border: 3px solid #08cc7e;
+                        border-radius: 45px;
+                        transition: all 0.3s;
+                        cursor: pointer;
+                        background: white;
+                        font-size: 1.2em;
+                        font-weight: 550;
+                        font-family: 'Montserrat', sans-serif;
+                      
+                      
+                      .button:hover {
+                        background: #315cfd;
+                        color: white;
+                        font-size: 1.5em;
+                      }">suscribete</button>
+                </form>
+                
+                
+
+            
+                {% endif %}
+              
+              
+            </div>
+
+        </div>
+    </section>
+  
+</body>
+</html>
+{% endblock %}

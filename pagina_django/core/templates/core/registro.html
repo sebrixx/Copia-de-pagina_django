@@ -1,0 +1,73 @@
+{% load static %}
+
+
+
+{% block head %}
+
+{% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro_usuario</title>
+    <link rel="stylesheet" href="{% static 'estilo_registro.css' %}">
+    
+    
+
+</head>
+<body>
+    <div class="singon-box">
+        <img class="avatar" src="{% static 'imagenes/user.png' %}" alt="" />
+        <form action="" method="post" id="form" >
+
+            {% csrf_token %}
+            
+            <div class="div">
+                <!-- nombre completo -->
+                <label for="name">Nombre de Usuario</label>
+                {{form.username}}
+            </div>
+            <div class="div">
+                <!-- nombre completo -->
+                <label for="name">Nombre</label>
+                {{form.first_name}}
+                
+            </div>
+            <div class="div">
+                <!-- EMAIL -->
+                <label for="name">Apellido</label>
+                {{form.last_name}}
+            </div>
+            
+            <div class="div">
+                <!-- EMAIL -->
+                <label for="gmail">Correo electrónico</label>
+                 {{form.email}}
+                
+            </div>
+            <div class="div">
+               
+                <!-- Password -->
+                <label for="password2">Contraseña</label>
+               {{form.password1}}
+            </div>
+           
+            <div class="div">
+                <!-- Password -->
+                <label for="password2">Confirmacion Contraseña</label>
+                {{form.password2}}
+            </div>
+             {{form.error}}
+            <button class="btn" type="submit">Registrarse</button>
+            <a href="{% url 'login' %}">¿Ya tienes cuenta?</a>
+        </form>
+        <div id="warnings"></div>
+    </div>
+
+
+
+</body>
+</html>

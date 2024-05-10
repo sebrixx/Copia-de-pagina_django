@@ -1,0 +1,49 @@
+{% extends 'core/adminindex_base.html' %}
+{% load static %}
+
+{% block content %}
+    <!--productos-->
+    <section class="productos">
+      
+
+      <!--todos los productos-->
+
+      <h2 class="titulo">PRODUCTOS</h2>
+
+      {% for productos in contenido %}
+       <div class="contenedor_de_productos">
+         <div class="box">
+           <!--imagen_producto-->
+           <div class="img_pdt">
+             <img src="{{productos.imagen}}" class="img_d_pdt" alt="producto">
+           </div>
+           <!--detalles del producto-->
+           <div class="box-body">
+             <h1 class="titulo_2">{{Productos.nombre}}</h1>
+             <h3 class="precio">{{productos.tachado}}</h3>
+             <h3 class="precio2">${{productos.precio}}</h3>
+             <p class="detalles">
+               Alimento con pollo para gatos adultos esterilizados.
+             </p>
+             <h5>{{productos.stock}} Disponibles </h5>
+             <!-- <div class="puntaje">
+                           <p>5</p>
+                           &nbsp
+                           
+                          <img class="star"
+                             src="img/Estrella_amarilla.png"
+                             alt="ESTRELLITA"
+                           /> -->
+ 
+             <input class="btn" type="submit" value="Agregar al Carro" />
+           </div>
+         </div>
+       </div>
+       {% endfor %}
+
+    </section>
+    
+    <!--fin de principal-->
+
+    <!--footer-->
+    {% endblock %} 

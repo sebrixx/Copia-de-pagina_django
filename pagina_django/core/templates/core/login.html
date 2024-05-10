@@ -1,0 +1,42 @@
+{% load static %}
+
+{% load  crispy_forms_tags %}
+
+{% block head %}
+<script src="{% static 'login.js' %}"></script>
+{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso</title>
+    <link rel="stylesheet" href="{% static 'estilo_login.css' %}">
+    
+</head>
+
+<body>
+    <div class="login-box">
+        
+        <img class="avatar" src="{% static 'productos/zarla-nanny-can-1x1-2400x2400-20211020-9bbg4gtrmgfrd7p3wxph.png' %}" alt="Logo">
+        <h1>Bienvenido, complete para ingresar</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+         
+            <!-- username -->
+            <label for="Email">Correo o Nombre de usuario </label>
+           {{form.username}}
+            <!-- password -->
+            <label for="Password">Contraseña</label>
+            {{form.password}}
+
+            <button type="submit" class="btn"><a href="">iniciar seccion</a></button>
+            <a href="">¿Has olvidado tu contraseña?</a><br>
+            <a href="{% url 'registro' %}">¿No tienes una cuenta?</a>
+        </form>
+            
+        
+    </div>
+</body>
+</html>

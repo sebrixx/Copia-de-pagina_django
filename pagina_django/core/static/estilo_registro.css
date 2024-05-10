@@ -1,0 +1,173 @@
+* {font-family: 'Roboto', sans-serif; ;}
+
+body{ 
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(8, 156, 35, 0.25),rgba(30, 199, 15, 0.1)), url(imagenes/61312a_93c9ba76b116438383d188cd2db0e90c~mv2.jpg) no-repeat center fixed;
+    background-size: cover ;
+    height: 100vh;
+}
+
+.singon-box {
+
+    width: 700px;
+    height: 500px;
+    background: linear-gradient(rgba(0, 217, 11, 0.4),rgba(17, 205, 14, 0.4));
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+form{
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 30px;
+    width: auto;
+    height: auto;
+}
+form .div{
+    width: 50%;
+   
+}
+
+
+
+.singon-box form .numtel{
+    display: inline-flex;
+    
+}
+.singon-box .avatar{
+    height: 150px;
+    border-radius: 50%;
+    width: auto;
+    width: 150px;
+    position: absolute;
+    top: -70px;
+    left: calc(50% - 120px);
+    object-fit: cover; 
+    background: #dfdfdf;  
+    
+    
+}
+
+.singon-box label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    text-shadow: 0 0 10px black;
+}
+
+.singon-box input{
+    width: 100%;
+    margin-bottom: 20px; ;
+}
+
+.singon-box input[type="text"] , 
+.singon-box input[type="number"] ,
+.singon-box input[type="password"],
+.singon-box input[type="date"]{
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: beige;
+    font-size: 16px;
+    
+}
+.singon-box select{
+    border: none;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: beige;
+    font-size: 16px;
+    text-shadow: 0 0 10px;
+
+}
+.singon-box input[type="text"] , 
+.singon-box input[type="password"],
+.singon-box input[type="date"]{
+    width: 250px;
+}
+
+.singon-box input[type="number"] {
+    width: 190px;
+}
+
+.singon-box input[type="text"]::placeholder , 
+.singon-box input[type="number"]::placeholder ,
+.singon-box input[type="password"]::placeholder
+{
+    color: white;
+}
+
+.singon-box .btn{
+    width: 200px;
+    text-align: center;
+    font-size: medium;
+    display: block;
+    margin: 15px auto;
+    padding: 10px 40px;
+    border: 2px solid rgb(27, 255, 145);
+    background-color: rgb(17, 221, 51);
+    color: #fff;
+    box-shadow: 0 0 10px black;
+    border-radius: 25px;
+    cursor: pointer;
+   
+}
+
+.singon-box .btn:hover{
+    background: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 10px black;
+}
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #b06ab3;
+    padding-top: 20px;
+   
+}
+.singon-box a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px black;
+    font-size: medium;
+}
+
+.singon-box a:hover{
+    color: rgb(47, 255, 0);
+    
+}
+
+footer .grupo-2{
+    padding: 15px 10px;
+    text-align: center;
+    color :white ;
+}
+
+footer .grupo-2 small{
+    font-size: 15px;
+    text-shadow: 0 0 20px black;
+}
+.error{
+    
+    color: #F83265;
+   
+}

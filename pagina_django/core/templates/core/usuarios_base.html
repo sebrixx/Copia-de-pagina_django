@@ -1,0 +1,89 @@
+{% load static %}
+
+{% block head %}
+<script src="{% static 'usuario.js' %}"></script>
+{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'usuarios.css' %}">
+<body>
+    
+
+    <div class="arriba">
+        <div class="logo">
+            <img class="log" src="{% static 'productos/zarla-nanny-can-1x1-2400x2400-20211020-9bbg4gtrmgfrd7p3wxph.png' %}" alt="">
+
+        </div>
+    </div>
+    <!-- PRINCIPAL -->
+    <div class="principal">
+        <div class="narvar">
+            <a href="{% url 'admin_index' %}">ATRAS</a>
+
+
+        </div>
+
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+
+
+    <footer>
+        <div class="informacion">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="{% static 'productos/zarla-nanny-can-1x1-2400x2400-20211020-9bbg4gtrmgfrd7p3wxph.png' %}"
+                            alt="logo" />
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Sobre Nosotros</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+                    voluptates, consectetur neque ipsam iusto voluptatem repellendus ea
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                    nobis, iure esse omnis quae amet sed doloribus dolores cupiditate,
+                </p>
+                <div class="btn-container">
+                    <a class="btn" href="#" class="btn">VER MÁS</a>
+                  
+                </div>
+            </div>
+             <!--<div class="box">
+          <h2>Siguenos</h2>
+          <div class="rrss">
+            <a href="https://es-la.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+            <a href="https://twitter.com/?lang=es" class="fa fa-twitter"></a>
+
+          </div>
+        </div>-->
+        </div>
+        <div class="grupo-2">
+            <small>&copy;2023 <b>nombre de grupo</b> - Todos los Derechos
+                Reservados.</small>
+        </div>
+
+
+    </footer>
+</body>
+
+</html>

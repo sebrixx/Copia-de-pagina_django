@@ -1,0 +1,492 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@30);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    ;
+}
+
+.arriba {
+    background: linear-gradient(rgba(0, 143, 40, 0.7), rgba(0, 143, 40, 0.7));
+
+     height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5rem;
+    height: 100px;
+}
+
+.arriba .logo img {
+    padding-top: 10px;
+    padding-left: 40px;
+    height: auto;
+    width: 100px;
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.principal {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(rgba(0, 143, 40, 0.7), rgba(12, 4, 250, 0));
+}
+
+.principal a {
+    color: #fff;
+    padding: 13px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: bold;
+    transition: .3s;
+    text-shadow: 0 0 20px rgb(6, 217, 41);
+
+}
+
+/* bordear cuadro*/
+.principal a:hover {
+    box-shadow: 0px 0px 8px black;
+    text-shadow: 0 0 10px black;
+    scale: 1.2;
+    cursor: pointer;
+    color: rgb(8, 233, 0);
+    transition: .3s;
+}
+
+/* agregar una imagen de fondo*/
+body {
+
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(255, 207, 159, .50), rgba(255, 207, 159, 0.5)), url(imagenes/walpaiper.jpg) no-repeat center fixed;
+    background-size: cover;
+    height: 100vh;
+    align-items: center;
+
+    
+   
+    
+}
+
+/* buscador */
+.buscador .BS {
+    display: flex;
+    align-items: center;
+}
+
+.buscador input {
+    width: 20rem;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 10px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    outline: none;
+    text-shadow: 0 0 10px rgb(0, 251, 67);
+    box-shadow: 0 0 6px rgb(35, 42, 32);
+}
+
+.buscador .boton {
+    padding: 5px;
+    height: 33px;
+    width: 33px;
+
+    cursor: pointer;
+}
+
+.buscador .boton img {
+    height: auto;
+    width: auto;
+    width: 30px;
+
+
+}
+
+.buscador .boton:hover {
+    background: #0c6412;
+    border-radius: 50%;
+
+}
+
+.buscador input::placeholder {
+    color: rgb(218, 218, 218);
+}
+
+/*carrusel*/
+.containeeer{
+  width: 60%;
+
+  padding: 10px 40px;
+}
+
+.containeeer h2{
+    margin-top: 15px;
+    margin-left: 105px;
+   
+    color: #fff;
+    padding-right: 70px;
+   
+}
+.containeeer .swiper-container{
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+}
+.containeeer .swiper-slide {
+    margin-bottom: 15px;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  background: linear-gradient(rgb(0, 0, 0, .5), rgb(0, 0, 0, .5));
+  border-radius: 15px;
+  max-width: 200px;
+  margin: auto;
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  transition: .3s;
+  color: #fff;
+ 
+}
+
+.containeeer .swiper-slide:hover {
+    box-shadow: 0 0 10px #515151;
+    scale: 1.05;
+}
+
+
+
+.containeeer>.swiper-slide>.swiper_imagen>.card-img{
+    align-items: center;
+    
+}
+.containeeer .swiper-slide .card-img{
+    align-items: center;
+    width: 150px;
+   
+   
+
+}
+.containeeer .swiper-slide .card-description{
+    padding:1rem 1rem;
+    
+}
+
+.containeeer .swiper-slide .card-title,.container .swiper-slide .card-text{
+   margin-bottom: .5rem;
+   
+}
+
+.containeeer .swiper-slide .card-link{
+   text-align: center;  
+}
+
+.containeeer .swiper-slide .card-link a{
+    margin-bottom: 15px;
+    text-decoration: none;
+    display: block;
+    margin: 15px auto;
+    padding: 10px 10px;
+    border: 2px solid rgb(27, 255, 145);
+    background-color: rgb(17, 221, 51);
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.swiper-button-next{
+    right: 26px !important;
+}
+.swiper-button-prev{
+    left: 26px !important;
+}
+
+
+
+
+
+
+
+/* productos*/
+.productos {
+    padding: 20px 20px;
+    display: flex;
+    column-gap: 20px;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.productos .titulo {
+    color: #fff;
+    margin-bottom: 15px;
+
+
+}
+.contenedor_de_productos{
+    width: 500px;
+    
+}
+.productos .contenedor_de_productos {
+    margin-top: 30px;
+}
+
+.productos .contenedor_de_productos .box {
+    background: linear-gradient(rgb(0, 0, 0, .5), rgb(0, 0, 0, .5));
+    max-width: 200px;
+    margin: auto;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    transition: .3s;
+    color: #fff;
+
+}
+
+.productos .contenedor_de_productos .box .img_pdt {
+    background: #fff;
+    height: 230px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+   
+    align-items: center;
+}
+
+.productos>.contenedor_de_productos>.box .img_pdt>.img_d_pdt {
+   width: 200px;
+}
+
+.productos .contenedor_de_productos .box:hover {
+    box-shadow: 0 0 10px #515151;
+    scale: 1.05;
+}
+
+.productos .contenedor_de_productos .box .titulo_2 {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.productos .contenedor_de_productos .box input[type=submit] {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 40px;
+    border: 2px solid rgb(27, 255, 145);
+    background-color: rgb(17, 221, 51);
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.productos .contenedor_de_productos .box input[type=submit]:hover {
+    background: none;
+    color: white;
+    font-weight: bold;
+}
+
+.productos .contenedor_de_productos .box .precio {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: line-through;
+}
+
+.productos .contenedor_de_productos .box .precio2 {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/*
+ .productos .container .box .puntaje{
+    display: flex;
+    font-size: 20px;
+ }
+ 
+ .star{
+    height: auto;
+    width: auto;
+    max-height: 20px;
+    max-width: 20px;
+}
+*/
+.btn-container {
+    display: block;
+    line-height: 50px;
+    padding: 20px;
+}
+
+.btn-container a {
+    border: 2px solid rgb(109, 197, 14);
+    background-color: rgb(17, 221, 51);
+    text-decoration: none;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px #515151;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+}
+
+.btn-container a:hover {
+    background: none;
+    color: white;
+    font-weight: bold;
+
+}
+
+footer {
+    width: 100%;
+    background: linear-gradient (rgba(0, 143, 40, 0.7), rgba(0, 143, 40, 0.7));
+    background-size: cover;
+}
+
+footer .informacion {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+footer .informacion .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .informacion .box figure img {
+    width: 250px;
+
+}
+
+footer .informacion .box h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+    text-shadow: 0 0 20px black;
+
+}
+
+footer .informacion .box p {
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px black;
+
+}
+
+footer .informacion .box .rrss a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background: linear-gradient(rgba(0, 0, 0, .30), rgba(0, 0, 0, .3));
+    text-align: center;
+    transition: all 300ms ease;
+    box-shadow: 0 0 5px black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+footer .informacion .box .rrss a:hover {
+    color: rgb(255, 225, 115);
+    background: linear-gradient(rgba(0, 143, 40, 0.7), rgba(0, 143, 40, 0.7));
+}
+
+footer .informacion .box .btn-container a {
+    text-decoration: none;
+    display: block;
+    color: rgb(248, 207, 145);
+    text-shadow: 0 0 10px #515151;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer .informacion .box .btn-container a:hover {
+    box-shadow: 0 0 10px #515151;
+    color: #fff;
+    font-weight: bold;
+}
+
+footer .grupo-2 {
+    background: linear-gradient(rgba(0, 143, 40, 0.7), rgba(0, 143, 40, 0.7));
+    padding: 15px 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+footer .grupo-2 small {
+    font-size: 15px;
+    text-shadow: 0 0 20px black;
+}
+
+@media screen and (max-whith:800px) {
+    footer .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+/*  compra de productos */
+#cart-container table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+
+}
+
+#cart-container table thead td {
+    background: hsl(124, 79%, 22%);
+    color: #fff;
+    border: none;
+    padding: 6px 0;
+}
+
+#cart-container table td {
+    border: 1px solid #06991a;
+    text-align: center;
+    color: #000000;
+}
+
+#cart-container input {
+    width: 30px;
+    height: 30px;
+    color: #515151;
+
+}
+
+#compra {
+
+    cursor: pointer;
+}
+
+
+#cart-container table td>img {
+    height: 100px;
+    object-fit: cover;
+}
+
+

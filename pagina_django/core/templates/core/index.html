@@ -1,0 +1,52 @@
+g{% extends 'core/index_base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+    
+
+
+
+
+    <!--productos-->
+    <h2  style ="color: white; ">PRODUCTOS</h2>
+    
+    <div class="orden" id="orden" style="margin: 0%; padding: 0%;">
+      
+      <section class="productos" id="productos">
+        {% for productos in contenido %}
+          
+        <div class="contenedor_de_productos">
+          
+          <div class="box">
+            <!--imagen_producto-->
+            <div class="img_pdt">
+              <img src="{{productos.imagen.url}}" class="img_d_pdt" alt="producto">
+            </div>
+            <!--detalles del producto-->
+            <div class="box-body">
+              <h1 class="titulo_2">{{Productos.nombre.002}}</h1>
+              <h3 class="precio">{{productos.tachado}}</h3>
+              <h3 class="precio2">${{productos.precio}}</h3>
+              <p class="detalles">
+                {{productos.detalle}}
+              </p>
+              <h5>{{productos.stock}} Disponibles </h5>
+             
+              <div  class="btn-container" type="submit" >
+               <a class="btn" type="submit" href="{% url 'addtocar' productos.codigo %}">agregar al carro</a> 
+              </div>
+            </div>
+          </div>
+          
+        </div>
+           
+        {% endfor %}
+      </section>
+          
+    </div>
+   
+
+    {% endblock %} 
